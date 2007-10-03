@@ -2,13 +2,14 @@
 
 Name:           kerry
 Version:        0.2.1
-Release:        %mkrel 5
+Release:        %mkrel 6
 Summary:        Desktop search tool
 License:        GPL
 Group:          Graphical desktop/KDE
 Source:         http://developer.kde.org/~binner/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		kerry-fr.patch
 Patch1:		kerry-pt_BR.patch
+Patch2:         kerry-no-indexing-on-battery.patch
 BuildRequires:  kdebase-devel
 BuildRequires:  libbeagle-devel >= 0.2.5
 BuildRequires:  desktop-file-utils
@@ -23,6 +24,7 @@ A desktop search tool integrated with Beagle and KDE.
 %setup -q 
 %patch0 -p0
 %patch1 -p1
+%patch2 -p0
 
 %build
 # new pot files. Need regenerate entries
