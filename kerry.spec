@@ -15,7 +15,6 @@ BuildRequires:  libbeagle-devel >= 0.2.5
 BuildRequires:  desktop-file-utils
 URL:		http://en.opensuse.org/Kerry
 Requires:	beagle
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
 A desktop search tool integrated with Beagle and KDE.
