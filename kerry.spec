@@ -1,22 +1,20 @@
-%define __libtoolize    /bin/true
-
-Name:           kerry
-Version:        0.2.1
-Release:        %mkrel 10
-Summary:        Desktop search tool
-License:        GPL
-Group:          Graphical desktop/KDE
-Source:         http://developer.kde.org/~binner/%{name}/%{name}-%{version}.tar.bz2
-Patch0:		kerry-fr.patch
-Patch1:		kerry-pt_BR.patch
-Patch2:         kerry-no-indexing-on-battery.patch
-BuildRequires:  openldap-devel
-BuildRequires:  kdebase-devel
-BuildRequires:  libbeagle-devel >= 0.2.5
-BuildRequires:  desktop-file-utils
-URL:		http://en.opensuse.org/Kerry
-Requires:	beagle
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
+Name: kerry
+Version: 0.2.1
+Release: %mkrel 11
+Summary: Desktop search tool
+License: GPL
+Group: Graphical desktop/KDE
+URL: http://en.opensuse.org/Kerry
+Source: http://developer.kde.org/~binner/%{name}/%{name}-%{version}.tar.bz2
+Patch0:	kerry-fr.patch
+Patch1:	kerry-pt_BR.patch
+Patch2: kerry-no-indexing-on-battery.patch
+Patch3: kerry-libbeagle-0.3.0.patch
+BuildRequires: openldap-devel
+BuildRequires: kdebase-devel
+BuildRequires: libbeagle-devel >= 0.3.0
+BuildRequires: desktop-file-utils
+Requires: beagle
 
 %description
 A desktop search tool integrated with Beagle and KDE.
@@ -26,6 +24,7 @@ A desktop search tool integrated with Beagle and KDE.
 %patch0 -p0
 %patch1 -p1
 %patch2 -p0
+%patch3 -p1
 
 %build
 # new pot files. Need regenerate entries
@@ -38,14 +37,6 @@ make -f admin/Makefile.common
 %install
 rm -rf %buildroot
 %makeinstall_std
-
-desktop-file-install --vendor="" \
-  --add-only-show-in="KDE" \
-  --remove-category="Application" \
-  --remove-category="Utility" \
-  --add-category="X-MandrivaLinux-System-FileTools" \
-  --add-category="System" \
-  --dir %buildroot%{_datadir}/applications/kde %buildroot%{_datadir}/applications/kde/kerry.desktop
 
 rm -f %buildroot/%{_prefix}/shutdown/beagled-shutdown.sh
 %find_lang %{name}
