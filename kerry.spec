@@ -2,7 +2,7 @@
 
 Name:           kerry
 Version:        0.2.1
-Release:        %mkrel 9
+Release:        %mkrel 10
 Summary:        Desktop search tool
 License:        GPL
 Group:          Graphical desktop/KDE
@@ -10,6 +10,7 @@ Source:         http://developer.kde.org/~binner/%{name}/%{name}-%{version}.tar.
 Patch0:		kerry-fr.patch
 Patch1:		kerry-pt_BR.patch
 Patch2:         kerry-no-indexing-on-battery.patch
+BuildRequires:  openldap-devel
 BuildRequires:  kdebase-devel
 BuildRequires:  libbeagle-devel >= 0.2.5
 BuildRequires:  desktop-file-utils
