@@ -4,6 +4,7 @@ Release: %mkrel 12
 Summary: Desktop search tool
 License: GPL
 Group: Graphical desktop/KDE
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: http://en.opensuse.org/Kerry
 Source: http://developer.kde.org/~binner/%{name}/%{name}-%{version}.tar.bz2
 Patch0:	kerry-fr.patch
