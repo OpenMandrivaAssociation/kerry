@@ -1,6 +1,6 @@
 Name: kerry
 Version: 0.2.1
-Release: %mkrel 12
+Release: %mkrel 13
 Summary: Desktop search tool
 License: GPL
 Group: Graphical desktop/KDE
@@ -12,7 +12,7 @@ Patch1:	kerry-pt_BR.patch
 Patch2: kerry-no-indexing-on-battery.patch
 Patch3: kerry-libbeagle-0.3.0.patch
 BuildRequires: openldap-devel
-BuildRequires: kdebase-devel
+BuildRequires: kdebase3-devel
 BuildRequires: libbeagle-devel >= 0.3.0
 BuildRequires: desktop-file-utils
 Requires: beagle
@@ -31,7 +31,7 @@ A desktop search tool integrated with Beagle and KDE.
 # new pot files. Need regenerate entries
 make -f admin/Makefile.common
 
-%configure2_5x
+%configure_kde3
 
 %make
 
@@ -57,16 +57,15 @@ rm -rf %buildroot
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%{_bindir}/*
-%{_libdir}/kde3/*.so
-%{_libdir}/kde3/*.la
-%{_libdir}/*kerry*
-%_datadir/applications/kde/kcmbeagle.desktop
-%_datadir/applnk/.hidden/kcmkerry.desktop
-
-%{_datadir}/applications/kde/kerry.desktop
-%{_datadir}/autostart/*.desktop
-%{_iconsdir}/hicolor/*/apps/*
-%{_datadir}/apps/kerry/search-running.mng
-
+%{_kde3_bindir}/*
+%{_kde3_libdir}/kde3/*.so
+%{_kde3_libdir}/kde3/*.la
+%{_kde3_libdir}/*kerry*
+%_kde3_datadir/applications/kde/kcmbeagle.desktop
+%_kde3_datadir/applnk/.hidden/kcmkerry.desktop
+%{_kde3_datadir}/applications/kde/kerry.desktop
+%{_kde3_datadir}/autostart/*.desktop
+%{_kde3_iconsdir}/hicolor/*/apps/*
+%{_kde3_appsdir}/kerry/search-running.mng
+%{_kde3_prefix}/shutdown/*
 
