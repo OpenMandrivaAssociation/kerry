@@ -12,6 +12,7 @@ Source: http://developer.kde.org/~binner/%{name}/%{name}-%{version}.%svn.tar.bz2
 Patch4: only_kde.patch 
 BuildRequires: kdelibs4-devel
 BuildRequires: kdepimlibs4-devel
+BuildRequires: kdebase4-devel
 BuildRequires: openldap-devel
 BuildRequires: libbeagle-devel >= 0.3.0
 Requires: beagle
