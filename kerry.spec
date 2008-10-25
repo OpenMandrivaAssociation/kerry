@@ -2,7 +2,7 @@
 
 Name: kerry
 Version: 0.2.90
-Release: %mkrel 14
+Release: %mkrel 1
 Summary: Desktop search tool
 License: GPL
 Group: Graphical desktop/KDE
@@ -11,6 +11,7 @@ URL: http://en.opensuse.org/Kerry
 Source: http://developer.kde.org/~binner/%{name}/%{name}-%{version}.%svn.tar.bz2
 Patch4: only_kde.patch 
 BuildRequires: kdelibs4-devel
+BuildRequires: kdepimlibs4-devel
 BuildRequires: openldap-devel
 BuildRequires: libbeagle-devel >= 0.3.0
 Requires: beagle
