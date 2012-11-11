@@ -1,0 +1,8 @@
+--- kerry/src/kerry.autostart.desktop~	2008-10-22 22:31:28.000000000 +0200
++++ kerry/src/kerry.autostart.desktop	2008-10-22 22:42:52.000000000 +0200
+@@ -35,4 +35,4 @@
+ X-KDE-autostart-condition=kerryrc:General:AutoStart:true
+ X-KDE-autostart-after=panel
+ X-KDE-autostart-phase=2
+-
++OnlyShowIn=KDE;
