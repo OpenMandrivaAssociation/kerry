@@ -7,7 +7,7 @@ Summary: Desktop search tool
 License: GPL
 Group: Graphical desktop/KDE
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL: http://en.opensuse.org/Kerry
+URL: https://en.opensuse.org/Kerry
 Source: http://developer.kde.org/~binner/%{name}/%{name}-%{version}.%svn.tar.bz2
 Patch4: only_kde.patch 
 BuildRequires: kdelibs4-devel
