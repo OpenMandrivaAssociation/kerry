@@ -10,6 +10,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: https://en.opensuse.org/Kerry
 Source: http://developer.kde.org/~binner/%{name}/%{name}-%{version}.%svn.tar.bz2
 Patch4: only_kde.patch 
+BuildRequires:	make
 BuildRequires: kdelibs4-devel
 BuildRequires: kdepimlibs4-devel
 BuildRequires: kdebase4-devel
