@@ -2,7 +2,7 @@
 
 Name: kerry
 Version: 0.2.90
-Release: %mkrel 4
+Release: 5
 Summary: Desktop search tool
 License: GPL
 Group: Graphical desktop/KDE
